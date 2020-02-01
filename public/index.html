@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="manifest" href="manifest.json">
+  <title>サンプルPWAサイト</title>
+</head>
+<body style="text-aligin: center; width: 100%">
+<h1>サンプルPWAサイト</h1>
+<img
+    style="max-width: 300px"
+    src="/images/pwa-logo.png" alt="">
+
+<script>
+navigator.serviceWorker.register('/sw.js').then(function () {
+
+  console.log('サービスワーカーの登録成功');
+
+}).catch(function (err) {
+
+  console.log('サービスワーカーの登録ができませんでした：', err);
+
+});
+</script>
+</body>
+</html>
